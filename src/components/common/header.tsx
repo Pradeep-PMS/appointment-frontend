@@ -1,7 +1,8 @@
 "use client"
-import { DownOutlined, GlobalOutlined, HeartOutlined, QuestionCircleOutlined, ShoppingCartOutlined, UserOutlined } from '@ant-design/icons'
+import { DownOutlined, ShoppingCartOutlined, UserOutlined } from '@ant-design/icons'
 import { Avatar, Button, Col, Dropdown, Flex, Input, MenuProps, Row, Space } from 'antd'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import React from 'react'
 const items: MenuProps['items'] = [
     {
@@ -14,10 +15,12 @@ const items: MenuProps['items'] = [
       },
 ];
 
+
 const Header = () => {
+    const router = useRouter();
     return (
         <div>
-            <Row justify={'space-around'} className='mt-5 bg-white p-5 items-center' >
+            <Row justify={'space-around'} className='mt-5 p-5 items-center bg-black text-white' >
                 <Col className='text-2xl font-bold'>
                     Pradeep
                 </Col>
@@ -51,14 +54,11 @@ const Header = () => {
                             <Link href={"/signin"}><Button type="primary" >Sign in</Button></Link>
                         </div>
                         <div>
-                            <Link href={"/signup"}><Button type="primary" >Sign up</Button></Link>
+                            <Button type="primary" onClick={()=>router.push("/signup")} >Sign up</Button>
                         </div>
                         <div style={{ fontSize: '25px' }}>
                             <ShoppingCartOutlined />
                         </div>
-
-
-
                         <Avatar size="large" icon={<UserOutlined />} />
 
                     </Flex>

@@ -2,7 +2,6 @@
 import { ArrowUpOutlined, CalendarOutlined, CheckCircleOutlined, CloseCircleOutlined, DownOutlined, UserOutlined, UserSwitchOutlined } from '@ant-design/icons'
 import { Avatar, Button, Card, Col, Dropdown, Flex, MenuProps, Row, Space } from 'antd'
 import React from 'react'
-import Header from '../common/header';
 
 const items: MenuProps['items'] = [
   {
@@ -22,9 +21,9 @@ const items: MenuProps['items'] = [
 
 
 const Dashbaord = () => {
+  
   return (
 <>
-    <Header/>
     <Row gutter={[16, 16]}>
       <Col span={8}>
         <Flex vertical gap={10}>

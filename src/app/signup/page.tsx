@@ -1,10 +1,10 @@
-import DrSignup from '@/components/Doctor/signup'
+import Signup from '@/components/signup'
 import React from 'react'
 
 const page = () => {
   return (
     <div>
-      <DrSignup/>
+      <Signup/>
     </div>
   )
 }
